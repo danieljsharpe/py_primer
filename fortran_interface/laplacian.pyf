@@ -1,0 +1,18 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module laplacian ! in 
+    interface  ! in :laplacian
+        module laplacian ! in :laplacian:laplacian.f90
+            subroutine laplac(arr,lap,m,n) ! in :laplacian:laplacian.f90:laplacian
+                double precision dimension(m,n),intent(in) :: arr
+                double precision dimension(m - 1,n - 1),intent(out),depend(m,n) :: lap
+                integer, optional,intent(in),check(shape(arr,0)==m),depend(arr) :: m=shape(arr,0)
+                integer, optional,intent(in),check(shape(arr,1)==n),depend(arr) :: n=shape(arr,1)
+            end subroutine laplac
+        end module laplacian
+    end interface 
+end python module laplacian
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
