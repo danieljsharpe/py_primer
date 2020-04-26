@@ -1,6 +1,7 @@
 '''
 Python script to solve the celebrity problem.
-In a directed graph, we want to find (if it exists) a node with incoming edges from *all* other nodes, and no* outgoing edges (celebrity in a crowd known by all others).
+In a directed graph, we want to find (if it exists) a node with incoming edges from *all* other nodes, and no* outgoing edges
+(celebrity in a crowd known by all others, but themselves not knowing any one member of the crowd).
 '''
 
 from random import randrange
